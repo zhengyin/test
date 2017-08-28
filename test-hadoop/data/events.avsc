@@ -1,0 +1,27 @@
+{
+  "namespace":"com.demo.hadoop.avro",
+  "type":"record",
+  "name":"Event",
+  "doc":"http://gitbook.kongfz.com",
+  "fields":[
+    { "name":"event","type":"string"},
+    { "name":"userid","type":"int"},
+    { "name":"uuid","type":"string"},
+    { "name":"ip","type":"string"},
+    { "name":"s_channel","type":"string"},
+    { "name":"self_url","type":"string"},
+    { "name":"ref_url","type":"string","default":""},
+    { "name":"app_name","type":"string"},
+    { "name":"platform","type":"string"},
+    { "name":"event_date","type":"string"},
+    { "name":"event_time","type":"int"},
+    { "name":"event_attr","type":{"type":"map", "values":"string"}},
+    { "name":"event_string_args","type":{"type":"map", "values":"string"},"default":null},
+    { "name":"event_double_args","type":{"type":"map", "values":"double"},"default":null},
+    { "name":"attach_fields_1","type":"int","default":0},
+    { "name":"attach_fields_2","type":"string","default":""},
+    { "name":"attach_fields_3","type":{"type":"map", "values":"string"},"default":null},
+    { "name":"attach_fields_4","type":{"type":"map", "values":"int"},"default":null}
+  ]
+}
+
