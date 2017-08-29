@@ -1,4 +1,4 @@
-package com.izhengyin.test.spring.aop.advice.before;
+package com.izhengyin.test.spring.aop.advisor.staticMethod;
 import org.springframework.aop.MethodBeforeAdvice;
 
 import java.lang.reflect.Method;
@@ -10,6 +10,6 @@ import java.lang.reflect.Method;
 public class PersonBeforeAdvice implements MethodBeforeAdvice {
     @Override
     public void before(Method method, Object[] objects, Object o) throws Throwable {
-        System.out.println("What`s your name?");
+        System.out.println("Where are your from?");
     }
 }

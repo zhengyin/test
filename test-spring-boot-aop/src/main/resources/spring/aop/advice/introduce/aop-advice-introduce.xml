@@ -6,7 +6,7 @@
         <bean id="target" class="com.izhengyin.test.spring.aop.advice.introduce.Test.Jack"/>
         <bean id="jack"
 		    class="org.springframework.aop.framework.ProxyFactoryBean"
-            p:proxyInterfaces="com.izhengyin.test.spring.aop.advice.introduce.Person"
+            p:interfaces="com.izhengyin.test.spring.aop.advice.introduce.ActivePerson"
             p:target-ref="target"
 		    p:interceptorNames="introduceAdvice"
             p:proxyTargetClass="true"

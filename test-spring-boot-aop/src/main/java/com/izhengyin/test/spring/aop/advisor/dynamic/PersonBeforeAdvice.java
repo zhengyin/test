@@ -1,4 +1,4 @@
-package com.izhengyin.test.spring.aop.advisor.staticMethod;
+package com.izhengyin.test.spring.aop.advisor.dynamic;
 import org.springframework.aop.MethodBeforeAdvice;
 
 import java.lang.reflect.Method;

@@ -1,4 +1,4 @@
-package com.izhengyin.test.spring.aop.advice.exception;
+package com.izhengyin.test.spring.aop.advice.introduce;
 
 /**
  * Created by zhengyin on 2017/8/28 下午4:25.

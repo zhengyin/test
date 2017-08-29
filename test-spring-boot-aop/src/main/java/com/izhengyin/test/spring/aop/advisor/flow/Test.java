@@ -1,4 +1,4 @@
-package com.izhengyin.test.spring.aop.advisor.regexpMethod;
+package com.izhengyin.test.spring.aop.advisor.flow;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -7,8 +7,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Email  <zhengyin.name@gmail.com> .
  */
 public class Test {
-    public static void main(String[] args){
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/aop/advisor/regexpMethod/aop.xml");
+    public static void main(String[] args) {
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring/aop/advisor/flow/aop.xml");
         Person jack = (Person) context.getBean("jack");
         jack.sayName();
         jack.sayFromWhichCountry();
@@ -18,7 +18,14 @@ public class Test {
         xiaoIce.sayName();
         xiaoIce.sayFromWhichCountry();
         xiaoIce.sayFromCity();
+
+        // 直接通过get Bean 切面不会生效   context.getBean("asker");
+        Asker asker = new Asker();
+        asker.setPerson(jack);
+        asker.ask();
+
     }
+
 
     public static class Jack implements Person {
         @Override

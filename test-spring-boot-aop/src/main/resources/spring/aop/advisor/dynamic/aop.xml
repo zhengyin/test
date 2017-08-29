@@ -2,27 +2,23 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-        <bean id="advice"  class="com.izhengyin.test.spring.aop.advisor.regexpMethod.PersonBeforeAdvice"/>
-        <bean id="target1"  class="com.izhengyin.test.spring.aop.advisor.regexpMethod.Test.Jack"/>
-        <bean id="target2"  class="com.izhengyin.test.spring.aop.advisor.regexpMethod.Test.XiaoIce"/>
 
-
-        <bean id="advisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor"
-              p:advice-ref="advice">
-                <property name="patterns">
-                        <list>
-                                <value>.*FromWhichCountry</value>
-                                <value>.*FromCity</value>
-                        </list>
+        <bean id="target1"  class="com.izhengyin.test.spring.aop.advisor.dynamic.Test.Jack"/>
+        <bean id="target2"  class="com.izhengyin.test.spring.aop.advisor.dynamic.Test.XiaoIce"/>
+        <bean id="advisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+                <property name="pointcut">
+                        <bean class="com.izhengyin.test.spring.aop.advisor.dynamic.PersonAdvisor" />
+                </property>
+                <property name="advice">
+                        <bean class="com.izhengyin.test.spring.aop.advisor.dynamic.PersonBeforeAdvice"/>
                 </property>
         </bean>
 
         <bean id="parent" abstract="true"
 		    class="org.springframework.aop.framework.ProxyFactoryBean"
-            p:proxyInterfaces="com.izhengyin.test.spring.aop.advisor.regexpMethod.Person"
+            p:proxyInterfaces="com.izhengyin.test.spring.aop.advisor.dynamic.Person"
 		    p:interceptorNames="advisor"
         />
-
         <bean id="jack" parent="parent" p:target-ref="target1" />
         <bean id="xiaoIce" parent="parent" p:target-ref="target2" />
     </beans>

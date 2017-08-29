@@ -1,4 +1,4 @@
-package com.izhengyin.test.spring.aop.advisor.staticMethod;
+package com.izhengyin.test.spring.aop.advisor.regexpMethod;
 
 /**
  * Created by zhengyin on 2017/8/28 下午4:25.
@@ -9,4 +9,6 @@ public interface Person {
     public void sayName();
 
     public void sayFromWhichCountry();
+
+    public void sayFromCity();
 }
