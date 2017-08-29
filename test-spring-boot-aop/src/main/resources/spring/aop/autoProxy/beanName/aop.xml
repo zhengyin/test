@@ -2,28 +2,25 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-        <bean id="advice"  class="com.izhengyin.test.spring.aop.advisor.composablePointcut.PersonBeforeAdvice"/>
-        <bean id="target1"  class="com.izhengyin.test.spring.aop.advisor.composablePointcut.Test.Jack"/>
-        <bean id="target2"  class="com.izhengyin.test.spring.aop.advisor.composablePointcut.Test.XiaoIce"/>
+        <bean id="advice"  class="com.izhengyin.test.spring.aop.autoProxy.beanName.PersonBeforeAdvice"/>
+        <bean id="jack"  class="com.izhengyin.test.spring.aop.autoProxy.beanName.Test.Jack"/>
+        <bean id="xiaoIce"  class="com.izhengyin.test.spring.aop.autoProxy.beanName.Test.XiaoIce"/>
 
         <bean id="controlFlowPointcut" class="org.springframework.aop.support.ControlFlowPointcut">
-                <constructor-arg type="java.lang.Class" value="com.izhengyin.test.spring.aop.advisor.composablePointcut.Asker" />
+                <constructor-arg type="java.lang.Class" value="com.izhengyin.test.spring.aop.autoProxy.beanName.Asker" />
                 <constructor-arg type="java.lang.String" value="ask"/>
         </bean>
 
-        <bean id="advisorDefinedBean" class="com.izhengyin.test.spring.aop.advisor.composablePointcut.PersonAdvisor" />
+        <bean id="advisorDefinedBean" class="com.izhengyin.test.spring.aop.autoProxy.beanName.PersonAdvisor" />
         <bean id="advisor" class="org.springframework.aop.support.DefaultPointcutAdvisor"
-              p:pointcut="#{advisorDefinedBean.unionPointcut}"
+              p:pointcut="#{advisorDefinedBean.intersectionPointcut}"
               p:advice-ref="advice"
         />
 
-        <bean id="parent" abstract="true"
-		    class="org.springframework.aop.framework.ProxyFactoryBean"
-            p:proxyInterfaces="com.izhengyin.test.spring.aop.advisor.composablePointcut.Person"
-		    p:interceptorNames="advisor"
-        />
-
-        <bean id="jack" parent="parent" p:target-ref="target1" />
-        <bean id="xiaoIce" parent="parent" p:target-ref="target2" />
+        <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+                <property name="beanNames" value="jack" />
+                <property name="interceptorNames" value="advisor" />
+                <property name="optimize" value="true" />
+        </bean>
     </beans>
 

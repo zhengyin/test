@@ -1,4 +1,4 @@
-package com.izhengyin.test.spring.aop.advice.introduce;
+package com.izhengyin.test.spring.aop.advisor.introduce;
 
 /**
  * Created by zhengyin on 2017/8/29 上午9:50.

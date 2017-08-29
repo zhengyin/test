@@ -1,4 +1,4 @@
-package com.izhengyin.test.spring.aop.advisor.composablePointcut;
+package com.izhengyin.test.spring.aop.autoProxy.beanName;
 import org.springframework.aop.MethodBeforeAdvice;
 
 import java.lang.reflect.Method;

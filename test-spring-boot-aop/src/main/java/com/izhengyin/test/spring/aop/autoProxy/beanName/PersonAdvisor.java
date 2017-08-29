@@ -1,4 +1,4 @@
-package com.izhengyin.test.spring.aop.advisor.composablePointcut;
+package com.izhengyin.test.spring.aop.autoProxy.beanName;
 
 import org.springframework.aop.Pointcut;
 import org.springframework.aop.support.ComposablePointcut;

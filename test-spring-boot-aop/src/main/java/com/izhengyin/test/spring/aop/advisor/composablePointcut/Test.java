@@ -1,4 +1,4 @@
-package com.izhengyin.test.spring.aop.advisor.flow;
+package com.izhengyin.test.spring.aop.advisor.composablePointcut;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -8,7 +8,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Test {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/aop/advisor/flow/aop.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring/aop/advisor/composablePointcut/aop.xml");
+
         Person jack = (Person) context.getBean("jack");
         jack.sayName();
         jack.sayFromWhichCountry();
@@ -18,7 +19,7 @@ public class Test {
         xiaoIce.sayName();
         xiaoIce.sayFromWhichCountry();
         xiaoIce.sayFromCity();
-
+        System.out.println("--- --- --- --- --- --- --- --- --- --- --- --- ");
         // 直接通过get Bean 切面不会生效   context.getBean("asker");
         Asker asker = new Asker();
         asker.setPerson(jack);
@@ -51,7 +52,7 @@ public class Test {
         }
         @Override
         public void sayFromWhichCountry() {
-            System.out.println("I`m a Robot , I`m not have Country . I am from Microsoft.");
+            System.out.println("I am from Microsoft.");
         }
 
         @Override

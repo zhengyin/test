@@ -1,4 +1,4 @@
-package com.izhengyin.test.spring.aop.advisor.composablePointcut;
+package com.izhengyin.test.spring.aop.autoProxy.beanName;
 
 /**
  * Created by zhengyin on 2017/8/29 下午12:05.

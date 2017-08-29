@@ -1,4 +1,4 @@
-package com.izhengyin.test.spring.aop.advisor.flow;
+package com.izhengyin.test.spring.aop.advisor.composablePointcut;
 
 /**
  * Created by zhengyin on 2017/8/29 下午12:05.
@@ -10,6 +10,7 @@ public class Asker {
 
     public void ask(){
         person.sayFromWhichCountry();
+        person.sayFromCity();
     }
 
     public void setPerson(Person person){

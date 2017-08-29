@@ -1,4 +1,4 @@
-package com.izhengyin.test.spring.aop.advice.introduce;
+package com.izhengyin.test.spring.aop.advisor.introduce;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Test {
     public static void main(String[] args){
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring/aop/advice/introduce/aop-advice-introduce.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring/aop/advisor/introduce/aop.xml");
 
         Jack jack = (Jack) context.getBean("jack");
         jack.sayName();
@@ -23,7 +23,7 @@ public class Test {
 
     }
 
-    public static class Jack implements Person{
+    public static class Jack implements Person {
         @Autowired
         public void sayName() {
             System.out.println("My name is jack.");
