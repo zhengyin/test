@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="advice"  class="com.izhengyin.test.spring.aop.advisor.flow.PersonBeforeAdvice"/>
+        <bean id="target1"  class="com.izhengyin.test.spring.aop.advisor.flow.Test.Jack"/>
+        <bean id="target2"  class="com.izhengyin.test.spring.aop.advisor.flow.Test.XiaoIce"/>
+        <bean id="asker" class="com.izhengyin.test.spring.aop.advisor.flow.Asker" >
+                <property name="person" ref="target1" />
+        </bean>
+
+        <bean id="controlFlowPointcut" class="org.springframework.aop.support.ControlFlowPointcut">
+                <constructor-arg type="java.lang.Class" value="com.izhengyin.test.spring.aop.advisor.flow.Asker" />
+                <constructor-arg type="java.lang.String" value="ask"/>
+        </bean>
+
+        <bean id="advisor" class="org.springframework.aop.support.DefaultPointcutAdvisor"
+              p:advice-ref="advice" p:pointcut-ref="controlFlowPointcut" />
+
+        <bean id="parent" abstract="true"
+		    class="org.springframework.aop.framework.ProxyFactoryBean"
+            p:proxyInterfaces="com.izhengyin.test.spring.aop.advisor.flow.Person"
+		    p:interceptorNames="advisor"
+        />
+
+        <bean id="jack" parent="parent" p:target-ref="target1" />
+        <bean id="xiaoIce" parent="parent" p:target-ref="target2" />
+    </beans>
