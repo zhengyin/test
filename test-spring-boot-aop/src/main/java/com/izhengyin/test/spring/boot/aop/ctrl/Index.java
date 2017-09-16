@@ -18,6 +18,9 @@ public class Index {
 
     @RequestMapping(value = "/hello")
     public String hello(String name){
+        if(name == null){
+            throw new IllegalArgumentException("Name is Null!");
+        }
         return "Hi , "+ name;
     }
 }
