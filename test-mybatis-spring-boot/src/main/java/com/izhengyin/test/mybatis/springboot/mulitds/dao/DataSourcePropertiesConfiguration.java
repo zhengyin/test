@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class DataSourcePropertiesConfiguration {
-w
+
     @Primary
     @Qualifier("demo1DataSourceProperties")
     @Bean(name = "demo1DataSourceProperties")

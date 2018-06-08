@@ -3,12 +3,12 @@
  * 
  * DO NOT EDIT DIRECTLY
  */
-package com.izhengyin.test.hadoop.avro;
+package com.izhengyin.test.hadoop.avro;  
 @SuppressWarnings("all")
 /** http://gitbook.kongfz.com */
 @org.apache.avro.specific.AvroGenerated
 public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"SimpleEvent\",\"namespace\":\"com.demo.hadoop.avro\",\"doc\":\"http://gitbook.kongfz.com\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"uuid\",\"type\":[\"string\",\"null\"]},{\"name\":\"eventId\",\"type\":\"int\"},{\"name\":\"_date\",\"type\":[\"string\",\"null\"]},{\"name\":\"_timestamp\",\"type\":\"int\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"SimpleEvent\",\"namespace\":\"com.izhengyin.test.hadoop.avro\",\"doc\":\"http://gitbook.kongfz.com\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"uuid\",\"type\":[\"string\",\"null\"]},{\"name\":\"eventId\",\"type\":\"int\"},{\"name\":\"_date\",\"type\":[\"string\",\"null\"]},{\"name\":\"_timestamp\",\"type\":\"int\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
   @Deprecated public long id;
   @Deprecated public java.lang.CharSequence uuid;
@@ -19,7 +19,7 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
   /**
    * Default constructor.  Note that this does not initialize fields
    * to their default values from the schema.  If that is desired then
-   * one should use {@link \#newBuilder()}. 
+   * one should use <code>newBuilder()</code>. 
    */
   public SimpleEvent() {}
 
@@ -135,18 +135,18 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
   }
 
   /** Creates a new SimpleEvent RecordBuilder */
-  public static SimpleEvent.Builder newBuilder() {
-    return new SimpleEvent.Builder();
+  public static com.izhengyin.test.hadoop.avro.SimpleEvent.Builder newBuilder() {
+    return new com.izhengyin.test.hadoop.avro.SimpleEvent.Builder();
   }
   
   /** Creates a new SimpleEvent RecordBuilder by copying an existing Builder */
-  public static SimpleEvent.Builder newBuilder(SimpleEvent.Builder other) {
-    return new SimpleEvent.Builder(other);
+  public static com.izhengyin.test.hadoop.avro.SimpleEvent.Builder newBuilder(com.izhengyin.test.hadoop.avro.SimpleEvent.Builder other) {
+    return new com.izhengyin.test.hadoop.avro.SimpleEvent.Builder(other);
   }
   
   /** Creates a new SimpleEvent RecordBuilder by copying an existing SimpleEvent instance */
-  public static SimpleEvent.Builder newBuilder(SimpleEvent other) {
-    return new SimpleEvent.Builder(other);
+  public static com.izhengyin.test.hadoop.avro.SimpleEvent.Builder newBuilder(com.izhengyin.test.hadoop.avro.SimpleEvent other) {
+    return new com.izhengyin.test.hadoop.avro.SimpleEvent.Builder(other);
   }
   
   /**
@@ -163,11 +163,11 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
 
     /** Creates a new Builder */
     private Builder() {
-      super(SimpleEvent.SCHEMA$);
+      super(com.izhengyin.test.hadoop.avro.SimpleEvent.SCHEMA$);
     }
     
     /** Creates a Builder by copying an existing Builder */
-    private Builder(SimpleEvent.Builder other) {
+    private Builder(com.izhengyin.test.hadoop.avro.SimpleEvent.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -192,8 +192,8 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
     }
     
     /** Creates a Builder by copying an existing SimpleEvent instance */
-    private Builder(SimpleEvent other) {
-            super(SimpleEvent.SCHEMA$);
+    private Builder(com.izhengyin.test.hadoop.avro.SimpleEvent other) {
+            super(com.izhengyin.test.hadoop.avro.SimpleEvent.SCHEMA$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
         fieldSetFlags()[0] = true;
@@ -222,7 +222,7 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
     }
     
     /** Sets the value of the 'id' field */
-    public SimpleEvent.Builder setId(long value) {
+    public com.izhengyin.test.hadoop.avro.SimpleEvent.Builder setId(long value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -235,7 +235,7 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
     }
     
     /** Clears the value of the 'id' field */
-    public SimpleEvent.Builder clearId() {
+    public com.izhengyin.test.hadoop.avro.SimpleEvent.Builder clearId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -246,7 +246,7 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
     }
     
     /** Sets the value of the 'uuid' field */
-    public SimpleEvent.Builder setUuid(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.SimpleEvent.Builder setUuid(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.uuid = value;
       fieldSetFlags()[1] = true;
@@ -259,7 +259,7 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
     }
     
     /** Clears the value of the 'uuid' field */
-    public SimpleEvent.Builder clearUuid() {
+    public com.izhengyin.test.hadoop.avro.SimpleEvent.Builder clearUuid() {
       uuid = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -271,7 +271,7 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
     }
     
     /** Sets the value of the 'eventId' field */
-    public SimpleEvent.Builder setEventId(int value) {
+    public com.izhengyin.test.hadoop.avro.SimpleEvent.Builder setEventId(int value) {
       validate(fields()[2], value);
       this.eventId = value;
       fieldSetFlags()[2] = true;
@@ -284,7 +284,7 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
     }
     
     /** Clears the value of the 'eventId' field */
-    public SimpleEvent.Builder clearEventId() {
+    public com.izhengyin.test.hadoop.avro.SimpleEvent.Builder clearEventId() {
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -295,7 +295,7 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
     }
     
     /** Sets the value of the '_date' field */
-    public SimpleEvent.Builder setDate$1(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.SimpleEvent.Builder setDate$1(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this._date = value;
       fieldSetFlags()[3] = true;
@@ -308,7 +308,7 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
     }
     
     /** Clears the value of the '_date' field */
-    public SimpleEvent.Builder clearDate$1() {
+    public com.izhengyin.test.hadoop.avro.SimpleEvent.Builder clearDate$1() {
       _date = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -320,7 +320,7 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
     }
     
     /** Sets the value of the '_timestamp' field */
-    public SimpleEvent.Builder setTimestamp$1(int value) {
+    public com.izhengyin.test.hadoop.avro.SimpleEvent.Builder setTimestamp$1(int value) {
       validate(fields()[4], value);
       this._timestamp = value;
       fieldSetFlags()[4] = true;
@@ -333,11 +333,12 @@ public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase imp
     }
     
     /** Clears the value of the '_timestamp' field */
-    public SimpleEvent.Builder clearTimestamp$1() {
+    public com.izhengyin.test.hadoop.avro.SimpleEvent.Builder clearTimestamp$1() {
       fieldSetFlags()[4] = false;
       return this;
     }
 
+    @Override
     public SimpleEvent build() {
       try {
         SimpleEvent record = new SimpleEvent();

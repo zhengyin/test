@@ -2,6 +2,7 @@ package com.izhengyin.test.kafka.item4;
 
 import com.izhengyin.test.kafka.conf.Const;
 import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.text.SimpleDateFormat;

@@ -17,7 +17,7 @@ import java.util.Date;
  */
 public class DemoAppend {
     public static void main(String[] args) throws IOException, InterruptedException {
-        String filePath = "hdfs://hadoop:9000/data/testdata/db1/table/t4/year=2017/month=03/day=01/1.dat";
+        String filePath = "hdfs://hadoop-master2:9000/data/testdata/db1/table/t4/year=2017/month=03/day=01/1.dat";
         Configuration configuration = new Configuration();
         configuration.setBoolean("dfs.support.append",true);
         FileSystem fileSystem = FileSystem.get(URI.create(filePath),configuration);

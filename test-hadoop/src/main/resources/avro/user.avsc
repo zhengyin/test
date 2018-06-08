@@ -1,5 +1,5 @@
 {
-   "namespace": "com.demo.hadoop.avro",
+   "namespace": "com.izhengyin.test.hadoop.avro",
    "type": "record",
    "name": "User",
    "fields": [

@@ -63,7 +63,6 @@ Consumer implements Runnable {
 
             }
         });
-
         while (true){
             try{
                 ConsumerRecords<String,String> consumerRecords = consumer.poll(1000);

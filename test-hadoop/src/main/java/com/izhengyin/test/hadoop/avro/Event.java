@@ -3,12 +3,12 @@
  * 
  * DO NOT EDIT DIRECTLY
  */
-package com.izhengyin.test.hadoop.avro;
+package com.izhengyin.test.hadoop.avro;  
 @SuppressWarnings("all")
 /** http://gitbook.kongfz.com */
 @org.apache.avro.specific.AvroGenerated
 public class Event extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Event\",\"namespace\":\"com.demo.hadoop.avro\",\"doc\":\"http://gitbook.kongfz.com\",\"fields\":[{\"name\":\"event\",\"type\":\"string\"},{\"name\":\"userid\",\"type\":\"int\"},{\"name\":\"uuid\",\"type\":\"string\"},{\"name\":\"ip\",\"type\":\"string\"},{\"name\":\"s_channel\",\"type\":\"string\"},{\"name\":\"self_url\",\"type\":\"string\"},{\"name\":\"ref_url\",\"type\":\"string\",\"default\":\"\"},{\"name\":\"app_name\",\"type\":\"string\"},{\"name\":\"platform\",\"type\":\"string\"},{\"name\":\"event_date\",\"type\":\"string\"},{\"name\":\"event_time\",\"type\":\"int\"},{\"name\":\"event_attr\",\"type\":{\"type\":\"map\",\"values\":\"string\"}},{\"name\":\"event_string_args\",\"type\":{\"type\":\"map\",\"values\":\"string\"},\"default\":null},{\"name\":\"event_double_args\",\"type\":{\"type\":\"map\",\"values\":\"double\"},\"default\":null},{\"name\":\"attach_fields_1\",\"type\":\"int\",\"default\":0},{\"name\":\"attach_fields_2\",\"type\":\"string\",\"default\":\"\"},{\"name\":\"attach_fields_3\",\"type\":{\"type\":\"map\",\"values\":\"string\"},\"default\":null},{\"name\":\"attach_fields_4\",\"type\":{\"type\":\"map\",\"values\":\"int\"},\"default\":null}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Event\",\"namespace\":\"com.izhengyin.test.hadoop.avro\",\"doc\":\"http://gitbook.kongfz.com\",\"fields\":[{\"name\":\"event\",\"type\":\"string\"},{\"name\":\"userid\",\"type\":\"int\"},{\"name\":\"uuid\",\"type\":\"string\"},{\"name\":\"ip\",\"type\":\"string\"},{\"name\":\"s_channel\",\"type\":\"string\"},{\"name\":\"self_url\",\"type\":\"string\"},{\"name\":\"ref_url\",\"type\":\"string\",\"default\":\"\"},{\"name\":\"app_name\",\"type\":\"string\"},{\"name\":\"platform\",\"type\":\"string\"},{\"name\":\"event_date\",\"type\":\"string\"},{\"name\":\"event_time\",\"type\":\"int\"},{\"name\":\"event_attr\",\"type\":{\"type\":\"map\",\"values\":\"string\"}},{\"name\":\"event_string_args\",\"type\":{\"type\":\"map\",\"values\":\"string\"},\"default\":null},{\"name\":\"event_double_args\",\"type\":{\"type\":\"map\",\"values\":\"double\"},\"default\":null},{\"name\":\"attach_fields_1\",\"type\":\"int\",\"default\":0},{\"name\":\"attach_fields_2\",\"type\":\"string\",\"default\":\"\"},{\"name\":\"attach_fields_3\",\"type\":{\"type\":\"map\",\"values\":\"string\"},\"default\":null},{\"name\":\"attach_fields_4\",\"type\":{\"type\":\"map\",\"values\":\"int\"},\"default\":null}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
   @Deprecated public java.lang.CharSequence event;
   @Deprecated public int userid;
@@ -32,7 +32,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
   /**
    * Default constructor.  Note that this does not initialize fields
    * to their default values from the schema.  If that is desired then
-   * one should use {@link \#newBuilder()}. 
+   * one should use <code>newBuilder()</code>. 
    */
   public Event() {}
 
@@ -382,18 +382,18 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
   }
 
   /** Creates a new Event RecordBuilder */
-  public static Event.Builder newBuilder() {
-    return new Event.Builder();
+  public static com.izhengyin.test.hadoop.avro.Event.Builder newBuilder() {
+    return new com.izhengyin.test.hadoop.avro.Event.Builder();
   }
   
   /** Creates a new Event RecordBuilder by copying an existing Builder */
-  public static Event.Builder newBuilder(Event.Builder other) {
-    return new Event.Builder(other);
+  public static com.izhengyin.test.hadoop.avro.Event.Builder newBuilder(com.izhengyin.test.hadoop.avro.Event.Builder other) {
+    return new com.izhengyin.test.hadoop.avro.Event.Builder(other);
   }
   
   /** Creates a new Event RecordBuilder by copying an existing Event instance */
-  public static Event.Builder newBuilder(Event other) {
-    return new Event.Builder(other);
+  public static com.izhengyin.test.hadoop.avro.Event.Builder newBuilder(com.izhengyin.test.hadoop.avro.Event other) {
+    return new com.izhengyin.test.hadoop.avro.Event.Builder(other);
   }
   
   /**
@@ -423,11 +423,11 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
 
     /** Creates a new Builder */
     private Builder() {
-      super(Event.SCHEMA$);
+      super(com.izhengyin.test.hadoop.avro.Event.SCHEMA$);
     }
     
     /** Creates a Builder by copying an existing Builder */
-    private Builder(Event.Builder other) {
+    private Builder(com.izhengyin.test.hadoop.avro.Event.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.event)) {
         this.event = data().deepCopy(fields()[0].schema(), other.event);
@@ -504,8 +504,8 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Creates a Builder by copying an existing Event instance */
-    private Builder(Event other) {
-            super(Event.SCHEMA$);
+    private Builder(com.izhengyin.test.hadoop.avro.Event other) {
+            super(com.izhengyin.test.hadoop.avro.Event.SCHEMA$);
       if (isValidValue(fields()[0], other.event)) {
         this.event = data().deepCopy(fields()[0].schema(), other.event);
         fieldSetFlags()[0] = true;
@@ -586,7 +586,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'event' field */
-    public Event.Builder setEvent(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setEvent(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.event = value;
       fieldSetFlags()[0] = true;
@@ -599,7 +599,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'event' field */
-    public Event.Builder clearEvent() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearEvent() {
       event = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -611,7 +611,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'userid' field */
-    public Event.Builder setUserid(int value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setUserid(int value) {
       validate(fields()[1], value);
       this.userid = value;
       fieldSetFlags()[1] = true;
@@ -624,7 +624,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'userid' field */
-    public Event.Builder clearUserid() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearUserid() {
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -635,7 +635,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'uuid' field */
-    public Event.Builder setUuid(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setUuid(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.uuid = value;
       fieldSetFlags()[2] = true;
@@ -648,7 +648,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'uuid' field */
-    public Event.Builder clearUuid() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearUuid() {
       uuid = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -660,7 +660,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'ip' field */
-    public Event.Builder setIp(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setIp(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this.ip = value;
       fieldSetFlags()[3] = true;
@@ -673,7 +673,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'ip' field */
-    public Event.Builder clearIp() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearIp() {
       ip = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -685,7 +685,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 's_channel' field */
-    public Event.Builder setSChannel(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setSChannel(java.lang.CharSequence value) {
       validate(fields()[4], value);
       this.s_channel = value;
       fieldSetFlags()[4] = true;
@@ -698,7 +698,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 's_channel' field */
-    public Event.Builder clearSChannel() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearSChannel() {
       s_channel = null;
       fieldSetFlags()[4] = false;
       return this;
@@ -710,7 +710,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'self_url' field */
-    public Event.Builder setSelfUrl(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setSelfUrl(java.lang.CharSequence value) {
       validate(fields()[5], value);
       this.self_url = value;
       fieldSetFlags()[5] = true;
@@ -723,7 +723,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'self_url' field */
-    public Event.Builder clearSelfUrl() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearSelfUrl() {
       self_url = null;
       fieldSetFlags()[5] = false;
       return this;
@@ -735,7 +735,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'ref_url' field */
-    public Event.Builder setRefUrl(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setRefUrl(java.lang.CharSequence value) {
       validate(fields()[6], value);
       this.ref_url = value;
       fieldSetFlags()[6] = true;
@@ -748,7 +748,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'ref_url' field */
-    public Event.Builder clearRefUrl() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearRefUrl() {
       ref_url = null;
       fieldSetFlags()[6] = false;
       return this;
@@ -760,7 +760,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'app_name' field */
-    public Event.Builder setAppName(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setAppName(java.lang.CharSequence value) {
       validate(fields()[7], value);
       this.app_name = value;
       fieldSetFlags()[7] = true;
@@ -773,7 +773,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'app_name' field */
-    public Event.Builder clearAppName() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearAppName() {
       app_name = null;
       fieldSetFlags()[7] = false;
       return this;
@@ -785,7 +785,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'platform' field */
-    public Event.Builder setPlatform(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setPlatform(java.lang.CharSequence value) {
       validate(fields()[8], value);
       this.platform = value;
       fieldSetFlags()[8] = true;
@@ -798,7 +798,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'platform' field */
-    public Event.Builder clearPlatform() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearPlatform() {
       platform = null;
       fieldSetFlags()[8] = false;
       return this;
@@ -810,7 +810,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'event_date' field */
-    public Event.Builder setEventDate(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setEventDate(java.lang.CharSequence value) {
       validate(fields()[9], value);
       this.event_date = value;
       fieldSetFlags()[9] = true;
@@ -823,7 +823,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'event_date' field */
-    public Event.Builder clearEventDate() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearEventDate() {
       event_date = null;
       fieldSetFlags()[9] = false;
       return this;
@@ -835,7 +835,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'event_time' field */
-    public Event.Builder setEventTime(int value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setEventTime(int value) {
       validate(fields()[10], value);
       this.event_time = value;
       fieldSetFlags()[10] = true;
@@ -848,7 +848,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'event_time' field */
-    public Event.Builder clearEventTime() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearEventTime() {
       fieldSetFlags()[10] = false;
       return this;
     }
@@ -859,7 +859,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'event_attr' field */
-    public Event.Builder setEventAttr(java.util.Map<java.lang.CharSequence,java.lang.CharSequence> value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setEventAttr(java.util.Map<java.lang.CharSequence,java.lang.CharSequence> value) {
       validate(fields()[11], value);
       this.event_attr = value;
       fieldSetFlags()[11] = true;
@@ -872,7 +872,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'event_attr' field */
-    public Event.Builder clearEventAttr() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearEventAttr() {
       event_attr = null;
       fieldSetFlags()[11] = false;
       return this;
@@ -884,7 +884,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'event_string_args' field */
-    public Event.Builder setEventStringArgs(java.util.Map<java.lang.CharSequence,java.lang.CharSequence> value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setEventStringArgs(java.util.Map<java.lang.CharSequence,java.lang.CharSequence> value) {
       validate(fields()[12], value);
       this.event_string_args = value;
       fieldSetFlags()[12] = true;
@@ -897,7 +897,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'event_string_args' field */
-    public Event.Builder clearEventStringArgs() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearEventStringArgs() {
       event_string_args = null;
       fieldSetFlags()[12] = false;
       return this;
@@ -909,7 +909,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'event_double_args' field */
-    public Event.Builder setEventDoubleArgs(java.util.Map<java.lang.CharSequence,java.lang.Double> value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setEventDoubleArgs(java.util.Map<java.lang.CharSequence,java.lang.Double> value) {
       validate(fields()[13], value);
       this.event_double_args = value;
       fieldSetFlags()[13] = true;
@@ -922,7 +922,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'event_double_args' field */
-    public Event.Builder clearEventDoubleArgs() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearEventDoubleArgs() {
       event_double_args = null;
       fieldSetFlags()[13] = false;
       return this;
@@ -934,7 +934,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'attach_fields_1' field */
-    public Event.Builder setAttachFields1(int value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setAttachFields1(int value) {
       validate(fields()[14], value);
       this.attach_fields_1 = value;
       fieldSetFlags()[14] = true;
@@ -947,7 +947,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'attach_fields_1' field */
-    public Event.Builder clearAttachFields1() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearAttachFields1() {
       fieldSetFlags()[14] = false;
       return this;
     }
@@ -958,7 +958,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'attach_fields_2' field */
-    public Event.Builder setAttachFields2(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setAttachFields2(java.lang.CharSequence value) {
       validate(fields()[15], value);
       this.attach_fields_2 = value;
       fieldSetFlags()[15] = true;
@@ -971,7 +971,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'attach_fields_2' field */
-    public Event.Builder clearAttachFields2() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearAttachFields2() {
       attach_fields_2 = null;
       fieldSetFlags()[15] = false;
       return this;
@@ -983,7 +983,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'attach_fields_3' field */
-    public Event.Builder setAttachFields3(java.util.Map<java.lang.CharSequence,java.lang.CharSequence> value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setAttachFields3(java.util.Map<java.lang.CharSequence,java.lang.CharSequence> value) {
       validate(fields()[16], value);
       this.attach_fields_3 = value;
       fieldSetFlags()[16] = true;
@@ -996,7 +996,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'attach_fields_3' field */
-    public Event.Builder clearAttachFields3() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearAttachFields3() {
       attach_fields_3 = null;
       fieldSetFlags()[16] = false;
       return this;
@@ -1008,7 +1008,7 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Sets the value of the 'attach_fields_4' field */
-    public Event.Builder setAttachFields4(java.util.Map<java.lang.CharSequence,java.lang.Integer> value) {
+    public com.izhengyin.test.hadoop.avro.Event.Builder setAttachFields4(java.util.Map<java.lang.CharSequence,java.lang.Integer> value) {
       validate(fields()[17], value);
       this.attach_fields_4 = value;
       fieldSetFlags()[17] = true;
@@ -1021,12 +1021,13 @@ public class Event extends org.apache.avro.specific.SpecificRecordBase implement
     }
     
     /** Clears the value of the 'attach_fields_4' field */
-    public Event.Builder clearAttachFields4() {
+    public com.izhengyin.test.hadoop.avro.Event.Builder clearAttachFields4() {
       attach_fields_4 = null;
       fieldSetFlags()[17] = false;
       return this;
     }
 
+    @Override
     public Event build() {
       try {
         Event record = new Event();

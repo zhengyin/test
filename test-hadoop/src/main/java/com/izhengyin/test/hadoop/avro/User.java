@@ -3,11 +3,11 @@
  * 
  * DO NOT EDIT DIRECTLY
  */
-package com.izhengyin.test.hadoop.avro;
+package com.izhengyin.test.hadoop.avro;  
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class User extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"com.demo.hadoop.avro\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"favorite_number\",\"type\":[\"int\",\"null\"]},{\"name\":\"favorite_color\",\"type\":[\"string\",\"null\"]}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"com.izhengyin.test.hadoop.avro\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"favorite_number\",\"type\":[\"int\",\"null\"]},{\"name\":\"favorite_color\",\"type\":[\"string\",\"null\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
   @Deprecated public java.lang.CharSequence name;
   @Deprecated public java.lang.Integer favorite_number;
@@ -16,7 +16,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   /**
    * Default constructor.  Note that this does not initialize fields
    * to their default values from the schema.  If that is desired then
-   * one should use {@link \#newBuilder()}. 
+   * one should use <code>newBuilder()</code>. 
    */
   public User() {}
 
@@ -96,18 +96,18 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
   }
 
   /** Creates a new User RecordBuilder */
-  public static User.Builder newBuilder() {
-    return new User.Builder();
+  public static com.izhengyin.test.hadoop.avro.User.Builder newBuilder() {
+    return new com.izhengyin.test.hadoop.avro.User.Builder();
   }
   
   /** Creates a new User RecordBuilder by copying an existing Builder */
-  public static User.Builder newBuilder(User.Builder other) {
-    return new User.Builder(other);
+  public static com.izhengyin.test.hadoop.avro.User.Builder newBuilder(com.izhengyin.test.hadoop.avro.User.Builder other) {
+    return new com.izhengyin.test.hadoop.avro.User.Builder(other);
   }
   
   /** Creates a new User RecordBuilder by copying an existing User instance */
-  public static User.Builder newBuilder(User other) {
-    return new User.Builder(other);
+  public static com.izhengyin.test.hadoop.avro.User.Builder newBuilder(com.izhengyin.test.hadoop.avro.User other) {
+    return new com.izhengyin.test.hadoop.avro.User.Builder(other);
   }
   
   /**
@@ -122,11 +122,11 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
 
     /** Creates a new Builder */
     private Builder() {
-      super(User.SCHEMA$);
+      super(com.izhengyin.test.hadoop.avro.User.SCHEMA$);
     }
     
     /** Creates a Builder by copying an existing Builder */
-    private Builder(User.Builder other) {
+    private Builder(com.izhengyin.test.hadoop.avro.User.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.name)) {
         this.name = data().deepCopy(fields()[0].schema(), other.name);
@@ -143,8 +143,8 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     }
     
     /** Creates a Builder by copying an existing User instance */
-    private Builder(User other) {
-            super(User.SCHEMA$);
+    private Builder(com.izhengyin.test.hadoop.avro.User other) {
+            super(com.izhengyin.test.hadoop.avro.User.SCHEMA$);
       if (isValidValue(fields()[0], other.name)) {
         this.name = data().deepCopy(fields()[0].schema(), other.name);
         fieldSetFlags()[0] = true;
@@ -165,7 +165,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     }
     
     /** Sets the value of the 'name' field */
-    public User.Builder setName(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.User.Builder setName(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.name = value;
       fieldSetFlags()[0] = true;
@@ -178,7 +178,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     }
     
     /** Clears the value of the 'name' field */
-    public User.Builder clearName() {
+    public com.izhengyin.test.hadoop.avro.User.Builder clearName() {
       name = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -190,7 +190,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     }
     
     /** Sets the value of the 'favorite_number' field */
-    public User.Builder setFavoriteNumber(java.lang.Integer value) {
+    public com.izhengyin.test.hadoop.avro.User.Builder setFavoriteNumber(java.lang.Integer value) {
       validate(fields()[1], value);
       this.favorite_number = value;
       fieldSetFlags()[1] = true;
@@ -203,7 +203,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     }
     
     /** Clears the value of the 'favorite_number' field */
-    public User.Builder clearFavoriteNumber() {
+    public com.izhengyin.test.hadoop.avro.User.Builder clearFavoriteNumber() {
       favorite_number = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -215,7 +215,7 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     }
     
     /** Sets the value of the 'favorite_color' field */
-    public User.Builder setFavoriteColor(java.lang.CharSequence value) {
+    public com.izhengyin.test.hadoop.avro.User.Builder setFavoriteColor(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.favorite_color = value;
       fieldSetFlags()[2] = true;
@@ -228,12 +228,13 @@ public class User extends org.apache.avro.specific.SpecificRecordBase implements
     }
     
     /** Clears the value of the 'favorite_color' field */
-    public User.Builder clearFavoriteColor() {
+    public com.izhengyin.test.hadoop.avro.User.Builder clearFavoriteColor() {
       favorite_color = null;
       fieldSetFlags()[2] = false;
       return this;
     }
 
+    @Override
     public User build() {
       try {
         User record = new User();

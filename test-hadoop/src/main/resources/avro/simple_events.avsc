@@ -1,0 +1,35 @@
+{
+  "namespace":"com.izhengyin.test.hadoop.avro",
+  "type":"record",
+  "name":"SimpleEvent",
+  "doc":"http://gitbook.kongfz.com",
+  "fields":[
+    {
+        "name":"id",
+        "type":"long"
+    },
+    {
+        "name":"uuid",
+        "type":[
+            "string",
+            "null"
+            ]
+    },
+    {
+        "name":"eventId",
+        "type":"int"
+    },
+    {
+        "name":"_date",
+        "type":[
+            "string",
+            "null"
+            ]
+    },
+    {
+        "name":"_timestamp",
+        "type":"int"
+    }
+  ]
+}
+
