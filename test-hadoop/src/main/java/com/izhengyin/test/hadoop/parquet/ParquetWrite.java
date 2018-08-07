@@ -49,9 +49,6 @@ public class ParquetWrite {
                 .withType(schema);
 
         ParquetWriter<Group> writer = builder.build();
-
-
-
         for (int i=0;i<10;i++){
             Group group = factory.newGroup();
             group.append("city","city_"+i);
@@ -62,13 +59,7 @@ public class ParquetWrite {
             writer.write(group);
             logger.info("write group : "+ JSON.toJSONString(group));
         }
-
         writer.close();
-
-
         logger.info("end!");
-
-
-
     }
 }

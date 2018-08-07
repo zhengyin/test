@@ -38,7 +38,7 @@ public class DemoAvro {
                 .setName("smartisan")
                 .setFavoriteColor("black")
                 .setFavoriteNumber(100).build();
-        File file = new File("data/avro/"+new Date().getMinutes()+"_users.avro");
+        File file = new File("/tmp/data/avro/"+new Date().getMinutes()+"_users.avro");
         DatumWriter<User> userDatumWriter = new SpecificDatumWriter<User>(User.class);
         DataFileWriter<User> dataFileWriter = new DataFileWriter<User>(userDatumWriter);
         dataFileWriter.create(user1.getSchema(), file);

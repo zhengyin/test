@@ -1,0 +1,33 @@
++-----------------------------------------------------------------------+--+
+|                            createtab_stmt                             |
++-----------------------------------------------------------------------+--+
+| CREATE EXTERNAL TABLE `test_avro`(                                    |
+|   `stringvar` string COMMENT '',                                      |
+|   `bytesvar` binary COMMENT '',                                       |
+|   `booleanvar` boolean COMMENT '',                                    |
+|   `intvar` int COMMENT '',                                            |
+|   `longvar` bigint COMMENT '',                                        |
+|   `floatvar` float COMMENT '',                                        |
+|   `doublevar` double COMMENT '',                                      |
+|   `enumvar` string COMMENT '',                                        |
+|   `strarrayvar` array<string> COMMENT '',                             |
+|   `intarrayvar` array<int> COMMENT '',                                |
+|   `mapvar` map<string,bigint> COMMENT '',                             |
+|   `fixedvar` binary COMMENT '')                                       |
+| ROW FORMAT SERDE                                                      |
+|   'org.apache.hadoop.hive.serde2.avro.AvroSerDe'                      |
+| STORED AS INPUTFORMAT                                                 |
+|   'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'        |
+| OUTPUTFORMAT                                                          |
+|   'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'       |
+| LOCATION                                                              |
+|   'hdfs://kongfz/user/hive/warehouse/test_avro'                       |
+| TBLPROPERTIES (                                                       |
+|   'COLUMN_STATS_ACCURATE'='false',                                    |
+|   'avro.schema.url'='hdfs://kongfz/tmp/test/avro/ParquetAvro.avsc',   |
+|   'numFiles'='0',                                                     |
+|   'numRows'='-1',                                                     |
+|   'rawDataSize'='-1',                                                 |
+|   'totalSize'='0',                                                    |
+|   'transient_lastDdlTime'='1528698185')                               |
++-----------------------------------------------------------------------+--+
