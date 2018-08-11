@@ -2,16 +2,12 @@ package com.izhengyin.test.hadoop.hdfs;
 
 import com.izhengyin.test.hadoop.avro.User;
 import org.apache.avro.Schema;
-import org.apache.avro.file.DataFileReader;
 import org.apache.avro.file.DataFileWriter;
-import org.apache.avro.io.DatumReader;
 import org.apache.avro.io.DatumWriter;
-import org.apache.avro.specific.SpecificDatumReader;
 import org.apache.avro.specific.SpecificDatumWriter;
 import org.apache.avro.specific.SpecificRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sun.nio.ch.sctp.Shutdown;
 
 import java.io.File;
 import java.io.IOException;
