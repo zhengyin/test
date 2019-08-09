@@ -1,0 +1,20 @@
+{
+    "type":    "record",
+    "name":    "EmployeeRecord",
+    "doc":    "employee records",
+    "fields":
+        [{
+            "name":    "id",
+            "type":    "int"
+
+        },
+        {
+            "name":    "empName",
+            "type":    "string"
+        },
+        {
+            "name":    "age",
+            "type":    "int"
+        }
+    ]
+}
