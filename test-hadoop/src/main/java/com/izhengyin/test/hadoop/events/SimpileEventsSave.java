@@ -97,6 +97,6 @@ public class SimpileEventsSave {
         Path srcPath = new Path(localfile); //原路径
         Path dstPath = new Path(hdfsFile); //目标路径
         fs.copyFromLocalFile(true,srcPath, dstPath);
-        System.out.println("Append to HDFS , local : "+ localfile +" hdfs : "+hdfsFile);
+        System.out.println("Append to HDFS , lock : "+ localfile +" hdfs : "+hdfsFile);
     }
 }

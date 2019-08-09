@@ -1,5 +1,6 @@
 package com.izhengyin.test.spark.sql;
 
+import com.alibaba.fastjson.JSON;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.spark.SparkConf;
 import org.apache.spark.SparkContext;
@@ -7,6 +8,7 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
+import scala.Tuple2;
 
 import java.util.List;
 
@@ -18,10 +20,9 @@ public class DataFramesTest {
 
 
     public static void main(String[] args){
-        for (String k : System.getenv().keySet()){
-            System.out.println(k + "=> "+System.getenv(k));
-        }
-         readJson(getAndCreateSparkContextWithLocal());
+
+
+      //   readJson(getAndCreateSparkContextWithLocal());
         readParquet(getAndCreateSparkContextWithCluster());
     }
 
@@ -45,12 +46,19 @@ public class DataFramesTest {
         countDf.show();
 
 
+
+        /*
         JavaRDD<String> shopEventCountRDD = countDf.toJavaRDD().map(row -> {
             return row.getAs("shop_id")+","+row.getAs("event")+","+row.getAs("total");
         });
-        List<String> shopEventCountList = shopEventCountRDD.collect();
-        for(String eventCount : shopEventCountList){
-            System.out.println(eventCount);
+        */
+
+        List<Tuple2<Integer,String>> shopEventCountList = countDf.toJavaRDD().mapToPair(row -> {
+            return new Tuple2<Integer,String>(row.getAs("shop_id"),row.getAs("shop_id")+","+row.getAs("event")+","+row.getAs("total"));
+        }).collect();
+
+        for(Tuple2<Integer,String> eventCount : shopEventCountList){
+            System.out.println(eventCount._1());
         }
 
     }
@@ -65,7 +73,7 @@ public class DataFramesTest {
 
     private static SparkContext getAndCreateSparkContextWithLocal(){
         SparkConf sparkConf = new SparkConf();
-        sparkConf.setMaster("local");
+        sparkConf.setMaster("lock");
         sparkConf.setAppName(DataFramesTest.class.getName());
         SparkContext sc = new SparkContext(sparkConf);
         return sc;

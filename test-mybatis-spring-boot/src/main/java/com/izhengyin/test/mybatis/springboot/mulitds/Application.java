@@ -1,9 +1,11 @@
 package com.izhengyin.test.mybatis.springboot.mulitds;
 
+import com.alibaba.fastjson.JSON;
 import com.izhengyin.test.mybatis.springboot.mulitds.Service.Demo1Service;
 import com.izhengyin.test.mybatis.springboot.mulitds.dao.mapper.demo1.NewsMapperFromDemo1;
 import com.izhengyin.test.mybatis.springboot.mulitds.dao.mapper.demo2.NewsMapperFromDemo2;
 import com.izhengyin.test.mybatis.springboot.mulitds.dimain.News;
+import com.izhengyin.test.mybatis.springboot.mulitds.dimain.Other;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -30,7 +35,6 @@ public class Application implements ApplicationRunner{
 
     }
 
-    @Component
     public static class testDemo1 implements CommandLineRunner{
         private NewsMapperFromDemo1 newsMapperFromDemo1;
         @Autowired
@@ -75,7 +79,6 @@ public class Application implements ApplicationRunner{
         }
     }
 
-    @Component
     public static class testDemo2 implements CommandLineRunner{
         private NewsMapperFromDemo2 newsMapperFromDemo2;
         public testDemo2(NewsMapperFromDemo2 newsMapperFromDemo2){
@@ -88,6 +91,25 @@ public class Application implements ApplicationRunner{
             logger.info("Select Demo2 News : "+news);
         }
     }
+
+    @Component
+    public static class testDemo3 implements CommandLineRunner{
+        private NewsMapperFromDemo1 newsMapperFromDemo1;
+        public testDemo3(NewsMapperFromDemo1 newsMapperFromDemo1) {
+            this.newsMapperFromDemo1 = newsMapperFromDemo1;
+        }
+
+        @Override
+        public void run(String... strings) throws Exception {
+            Map<String,Object> map = new HashMap<>();
+            map.put("id",2);
+            map.put("SQL","SELECT * FROM news WHERE id>#{id}");
+            List<News> news = newsMapperFromDemo1.getList(map);
+
+            logger.info(JSON.toJSON(news));
+        }
+    }
+
 
     public static void main(String[] args){
         SpringApplication.run(Application.class,args);

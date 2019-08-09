@@ -10,6 +10,7 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import scala.Tuple2;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -24,10 +25,11 @@ public class RddTest {
 
     public static void main(String[] args){
         SparkConf conf = new SparkConf();
-        conf.setMaster("local");
+        conf.setMaster("lock");
         conf.setAppName(RddTest.class.getName());
         JavaSparkContext jsc = new JavaSparkContext(conf);
-        JavaRDD<String> eventsWithStrRdds = jsc.textFile(RddTest.class.getClassLoader().getResource("data/events.dat").getFile());
+
+        JavaRDD<String> eventsWithStrRdds = jsc.textFile("/Users/zhengyin/Documents/project/java/com.izhengyin.test/test-spark/src/main/resources/data/events.dat");
 
         JavaRDD<EventsOriginalData> eventsRdds = eventsWithStrRdds.map((val) -> {
             return JSON.parseObject(val,new TypeReference<EventsOriginalData>(){});

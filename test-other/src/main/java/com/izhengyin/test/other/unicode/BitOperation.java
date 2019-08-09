@@ -10,6 +10,14 @@ package com.izhengyin.test.other.unicode;
 public class BitOperation {
 
     public static void main(String[] args){
+
+        for(int i = 100;i>0;i--){
+            System.out.println(i +" "+(i >> 1));
+        }
+        System.exit(1);
+
+
+
         shl();
         print("shl --- --- --- --- --- --- --- ");
         shr();
