@@ -26,6 +26,7 @@
         3. 停止 Consumer 记录最后一条消息的offset
         4. 重启 Consumer 比对offset
     * 结论 : 消息可以在宕机处从新接受，期间可能产生从复消息，取决于 COMMIT 最后一条消息的 offset ，如设置 Auto Commit 从复消息产生取决于最短消息频率与Interval时间
+    
 2. 同group , 多 consumer 当其中一个 consumer 挂掉后重连，重新接受消息的情况
     * step
         1. 启动 Producer 
