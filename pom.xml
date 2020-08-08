@@ -14,18 +14,17 @@
 
     <modules>
         <module>test-kafka</module>
-        <module>test-mybatis-spring-boot</module>
         <module>test-nio</module>
         <module>test-hadoop</module>
         <module>test-spark</module>
-        <module>test-spring-boot-aop</module>
         <module>test-spring-cloud</module>
         <module>test-other</module>
         <module>test-es</module>
         <module>test-rocketMQ</module>
         <module>test-pulsar</module>
         <module>test-reactor</module>
-        <module>test-spirng-boot</module>
+        <module>test-spring-boot</module>
+        <module>test-java9-feature</module>
     </modules>
 
     <properties>
