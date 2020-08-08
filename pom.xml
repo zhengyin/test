@@ -24,6 +24,8 @@
         <module>test-es</module>
         <module>test-rocketMQ</module>
         <module>test-pulsar</module>
+        <module>test-reactor</module>
+        <module>test-spirng-boot</module>
     </modules>
 
     <properties>

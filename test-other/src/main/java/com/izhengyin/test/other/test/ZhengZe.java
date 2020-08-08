@@ -1,5 +1,7 @@
 package com.izhengyin.test.other.test;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 public class ZhengZe {
 	public static void main(StringTest[] args) {
 		/*
@@ -15,6 +17,7 @@ public class ZhengZe {
 			
 		}
 		*/
+        ReentrantLock lock = new ReentrantLock();
 
 
 	}

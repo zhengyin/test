@@ -1,6 +1,9 @@
 package com.izhengyin.test.other.test;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ForkJoinPool;
+import java.util.stream.IntStream;
 
 /**
  * Created by zhengyin on 2017/6/12.
@@ -8,6 +11,12 @@ import java.util.*;
 public class CollectTest {
 
     public static void main(String[] args) {
+        IntStream.range(1,10).forEach(System.out::println);
+
+    }
+
+
+    public static void test1(){
         Map<Integer,String> params = new HashMap<>();
 
         params.put(1,"a");
@@ -68,6 +77,11 @@ public class CollectTest {
     }
 
 
+    public static void testConcurrentHashMap(){
+        ConcurrentHashMap map = new ConcurrentHashMap();
+        map.size();
 
+        ForkJoinPool forkJoinPool = new ForkJoinPool();
 
+    }
 }

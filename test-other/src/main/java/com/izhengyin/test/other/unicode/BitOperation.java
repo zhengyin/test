@@ -11,9 +11,7 @@ public class BitOperation {
 
     public static void main(String[] args){
 
-        for(int i = 100;i>0;i--){
-            System.out.println(i +" "+(i >> 1));
-        }
+       t1();
         System.exit(1);
 
 
@@ -133,6 +131,16 @@ public class BitOperation {
         int res = ~a ;                       // 1111 1111 1111 1111 1111 1111 1111 1010
         print(res); // 6
     }
+
+
+    public static void t1(){
+        Long v1 = 8000000000000000L;
+        print(Long.toBinaryString(v1));
+        Long v2 = 8001000000000000L;
+        print(Long.toBinaryString(v2));
+
+    }
+
 
     private static void print(Object o){
         System.out.println(o);

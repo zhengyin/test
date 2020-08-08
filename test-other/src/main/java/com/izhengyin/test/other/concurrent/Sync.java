@@ -1,4 +1,4 @@
-package com.izhengyin.test.other.lock;
+package com.izhengyin.test.other.concurrent;
 
 import java.util.concurrent.TimeUnit;
 

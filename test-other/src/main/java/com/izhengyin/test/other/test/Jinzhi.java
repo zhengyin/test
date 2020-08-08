@@ -9,8 +9,8 @@ public class Jinzhi {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		decimalToBinary();
-		byteToBinary();
+	//	decimalToBinary();
+	//	byteToBinary();
 		shortToInt();
 	}
 	
@@ -81,8 +81,8 @@ public class Jinzhi {
 	}
 	
 	static void shortToInt(){
-		short i = 12221;
-		System.out.println(i == 12221);
+
+		System.out.println(Long.valueOf("0",16)+Long.valueOf("f",16));
 	}
 
 }
