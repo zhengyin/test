@@ -15,6 +15,8 @@ public class Datetest {
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS",Locale.ENGLISH);
     public static void main(String[] args) throws ParseException {
 
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse("2020-08-12 10:00:00").getTime());
+
 
         System.out.println(getNextHour());
         System.exit(1);

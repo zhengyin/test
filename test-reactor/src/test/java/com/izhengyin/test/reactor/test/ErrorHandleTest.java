@@ -166,4 +166,19 @@ public class ErrorHandleTest {
         integers.doOnNext(System.out::println)
                 .subscribe();
     }
+
+    @Test
+    public void test10() throws InterruptedException{
+        Mono.just("a")
+                .map(v -> null)
+                .onErrorReturn("b")
+                .subscribe(
+                        value -> System.out.println("RECEIVED " + value),
+                        error -> System.err.println("CAUGHT " + error),
+                        () -> System.out.println("Stream complete! ")
+                );
+        TimeUnit.SECONDS.sleep(1);
+
+    }
+
 }
