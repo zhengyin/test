@@ -8,7 +8,7 @@ import java.util.List;
 public class Demo1 {
 	public static void main(String[] args) {
 		
-		String className = "com.izhengyin.reflect.TestInterface";
+		String className = "com.izhengyin.test.other.reflect.TestInterface";
 		
 		Class<?> clazz = null;
 		try {
@@ -17,11 +17,11 @@ public class Demo1 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		System.out.println("\n \n \n printMethod >>>> \n \n \n ");
 		printMethod(clazz);
-		
+        System.out.println("\n \n \n printClass >>>> \n \n \n ");
 		printClass();
-		
+        System.out.println("\n \n \n testInvoking >>>> \n \n \n ");
 		testInvoking();
 	}
 	
@@ -43,7 +43,7 @@ public class Demo1 {
 	private static void testInvoking(){
 		System.out.println(">>> >>> >>> >>> >>> >>> >>> testInvoking ");
 		
-		String className = "com.izhengyin.reflect.TestInterImpl";
+		String className = "com.izhengyin.test.other.reflect.TestInterImpl";
 		
 		Class<?> clazz = null;
 		try {

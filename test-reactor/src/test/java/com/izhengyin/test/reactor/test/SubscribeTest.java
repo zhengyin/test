@@ -29,30 +29,29 @@ public class SubscribeTest {
     }
     @Test
     public void test2(){
-       // SampleSubscriber<Integer> ss = new SampleSubscriber<Integer>();
-       // Flux<Integer> ints = Flux.range(1, 4);
-        SampleSubscriber<Long> ss = new SampleSubscriber<>();
-        Flux<Long> ints = Flux.interval(Duration.ofMillis(300), Schedulers.newSingle("test"));
-        /*
-        ints.subscribe(i -> System.out.println(i),
-                error -> System.err.println("Error " + error),
-                () -> {System.out.println("Done");},
-                s -> ss.request(10));
-
-         */
-        ints.subscribe(ss);
+        SampleSubscriber<Integer> sampleSubscriber = new SampleSubscriber<Integer>();
+        Flux<Integer> ints = Flux.range(1, 4);
+        ints.subscribe(i -> System.out.println("onNext "+i),
+                error -> System.err.println("onError " + error),
+                () -> System.out.println("onComplete"),
+                s -> sampleSubscriber.request(1));
+        ints.subscribe(sampleSubscriber);
+        SleepUtils.sleep(1);
     }
 
     public class SampleSubscriber<T> extends BaseSubscriber<T> {
         public void hookOnSubscribe(Subscription subscription) {
             System.out.println("Subscribed");
-            request(1);
+            request(2);
         }
-
         public void hookOnNext(T value) {
             System.out.println("hookOnNext "+value);
-            request(1);
+            if((Integer) value == 1){
+             //   request(1);
+            }
         }
+
+
     }
 
 }

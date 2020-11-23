@@ -25,6 +25,7 @@
         <module>test-reactor</module>
         <module>test-spring-boot</module>
         <module>test-java9-feature</module>
+        <module>test-class-loader</module>
     </modules>
 
     <properties>
