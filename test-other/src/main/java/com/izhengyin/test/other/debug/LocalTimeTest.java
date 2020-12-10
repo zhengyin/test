@@ -30,7 +30,9 @@ import java.util.stream.Stream;
 public class LocalTimeTest {
     public static void  main(String[] args) throws InterruptedException{
 
+
         IntStream.range(1,100).forEach(v -> System.out.println(v+" -> "+(v % 20)));
+
 
 
 

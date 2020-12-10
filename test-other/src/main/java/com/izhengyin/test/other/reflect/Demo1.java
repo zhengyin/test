@@ -2,27 +2,28 @@ package com.izhengyin.test.other.reflect;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 
 public class Demo1 {
 	public static void main(String[] args) {
-		
-		String className = "com.izhengyin.test.other.reflect.TestInterface";
-		
-		Class<?> clazz = null;
-		try {
-			clazz = Class.forName(className);
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("\n \n \n printMethod >>>> \n \n \n ");
-		printMethod(clazz);
+
+        String className = "com.izhengyin.test.other.reflect.TestInterface";
+
+        Class<?> clazz = null;
+        try {
+            clazz = Class.forName(className);
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        System.out.println("\n \n \n printMethod >>>> \n \n \n ");
+        printMethod(clazz);
         System.out.println("\n \n \n printClass >>>> \n \n \n ");
-		printClass();
+        printClass();
         System.out.println("\n \n \n testInvoking >>>> \n \n \n ");
-		testInvoking();
+        testInvoking();
 	}
 	
 	

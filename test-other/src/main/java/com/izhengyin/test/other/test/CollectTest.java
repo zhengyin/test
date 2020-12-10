@@ -1,5 +1,7 @@
 package com.izhengyin.test.other.test;
 
+import com.alibaba.fastjson.JSON;
+
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ForkJoinPool;
@@ -11,8 +13,11 @@ import java.util.stream.IntStream;
 public class CollectTest {
 
     public static void main(String[] args) {
-        IntStream.range(1,10).forEach(System.out::println);
-
+        ConcurrentHashMap<Integer,Integer> c = new ConcurrentHashMap<>();
+        IntStream.range(1,10).forEach(i -> c.put(i,i));
+        System.out.println(JSON.toJSONString(c));
+        c.values().removeIf(v -> v > 5);
+        System.out.println(JSON.toJSONString(c));
     }
 
 
