@@ -2,7 +2,7 @@
   "namespace":"com.izhengyin.test.hadoop.avro",
   "type":"record",
   "name":"SimpleEvent",
-  "doc":"http://gitbook.kongfz.com",
+  "doc":"http://gitbook.izhengyin.com",
   "fields":[
     {
         "name":"id",

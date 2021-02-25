@@ -15,7 +15,7 @@
     </property>
     <property>
         <name>javax.jdo.option.ConnectionPassword</name>
-        <value>kongfz.com</value>
+        <value>izhengyin.com</value>
     </property>
     <property>
         <name>hive.metastore.schema.verification</name>
@@ -30,11 +30,11 @@
     </property>
     <property>
         <name>hive.metastore.warehouse.dir</name>
-        <value>hdfs://kongfz/user/hive/warehouse</value>
+        <value>hdfs://izhengyin/user/hive/warehouse</value>
     </property>
     <property>
         <name>hive.exec.scratchdir</name>
-        <value>hdfs://kongfz/tmp/hive</value>
+        <value>hdfs://izhengyin/tmp/hive</value>
     </property>
     <property>
         <name>hive.metastore.uris</name>

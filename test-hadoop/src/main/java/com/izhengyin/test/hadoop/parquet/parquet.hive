@@ -21,10 +21,10 @@
 | OUTPUTFORMAT                                                          |
 |   'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'       |
 | LOCATION                                                              |
-|   'hdfs://kongfz/user/hive/warehouse/test_avro'                       |
+|   'hdfs://izhengyin/user/hive/warehouse/test_avro'                       |
 | TBLPROPERTIES (                                                       |
 |   'COLUMN_STATS_ACCURATE'='false',                                    |
-|   'avro.schema.url'='hdfs://kongfz/tmp/test/avro/ParquetAvro.avsc',   |
+|   'avro.schema.url'='hdfs://izhengyin/tmp/test/avro/ParquetAvro.avsc',   |
 |   'numFiles'='0',                                                     |
 |   'numRows'='-1',                                                     |
 |   'rawDataSize'='-1',                                                 |

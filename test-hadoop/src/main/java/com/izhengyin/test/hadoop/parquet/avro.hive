@@ -21,7 +21,7 @@
 | OUTPUTFORMAT                                                        |
 |   'org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat'  |
 | LOCATION                                                            |
-|   'hdfs://kongfz/user/hive/warehouse/test_parquet'                  |
+|   'hdfs://izhengyin/user/hive/warehouse/test_parquet'                  |
 | TBLPROPERTIES (                                                     |
 |   'COLUMN_STATS_ACCURATE'='false',                                  |
 |   'numFiles'='0',                                                   |

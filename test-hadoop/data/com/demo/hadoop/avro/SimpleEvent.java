@@ -5,10 +5,10 @@
  */
 package com.demo.hadoop.avro;  
 @SuppressWarnings("all")
-/** http://gitbook.kongfz.com */
+/** http://gitbook.izhengyin.com */
 @org.apache.avro.specific.AvroGenerated
 public class SimpleEvent extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"SimpleEvent\",\"namespace\":\"com.demo.hadoop.avro\",\"doc\":\"http://gitbook.kongfz.com\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"uuid\",\"type\":[\"string\",\"null\"]},{\"name\":\"eventId\",\"type\":\"int\"},{\"name\":\"_date\",\"type\":[\"string\",\"null\"]},{\"name\":\"_timestamp\",\"type\":\"int\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"SimpleEvent\",\"namespace\":\"com.demo.hadoop.avro\",\"doc\":\"http://gitbook.izhengyin.com\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"uuid\",\"type\":[\"string\",\"null\"]},{\"name\":\"eventId\",\"type\":\"int\"},{\"name\":\"_date\",\"type\":[\"string\",\"null\"]},{\"name\":\"_timestamp\",\"type\":\"int\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
   @Deprecated public long id;
   @Deprecated public java.lang.CharSequence uuid;

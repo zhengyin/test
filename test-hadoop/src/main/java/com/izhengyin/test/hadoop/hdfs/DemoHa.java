@@ -27,7 +27,7 @@ import java.util.Map;
 public class DemoHa {
 
     private static final String testrecod = "{\n" +
-            "    \"namespace\": \"com.kongfz.bigdata.transferservice.entity.test\",\n" +
+            "    \"namespace\": \"com.izhengyin.bigdata.transferservice.entity.test\",\n" +
             "    \"type\":    \"record\",\n" +
             "    \"name\":    \"TestRecord\",\n" +
             "    \"doc\":    \"Test records\",\n" +
@@ -50,12 +50,12 @@ public class DemoHa {
         Configuration conf = new Configuration();
 
         //设置配置相关的信息，分别对应hdfs-site.xml core-site.xml
-        conf.set("fs.defaultFS", "hdfs://kongfz");
-        conf.set("dfs.nameservices", "kongfz");
-        conf.set("dfs.ha.namenodes.kongfz", "nn1,nn2");
-        conf.set("dfs.namenode.rpc-address.kongfz.nn1", "hadoop-master1:9000");
-        conf.set("dfs.namenode.rpc-address.kongfz.nn2", "hadoop-master2:9000");
-        conf.set("dfs.client.failover.proxy.provider.kongfz", "org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider");
+        conf.set("fs.defaultFS", "hdfs://izhengyin");
+        conf.set("dfs.nameservices", "izhengyin");
+        conf.set("dfs.ha.namenodes.izhengyin", "nn1,nn2");
+        conf.set("dfs.namenode.rpc-address.izhengyin.nn1", "hadoop-master1:9000");
+        conf.set("dfs.namenode.rpc-address.izhengyin.nn2", "hadoop-master2:9000");
+        conf.set("dfs.client.failover.proxy.provider.izhengyin", "org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider");
         //设置实现类，因为会出现类覆盖的问题
         conf.set("fs.hdfs.impl", org.apache.hadoop.hdfs.DistributedFileSystem.class.getName());
         conf.set("fs.file.impl", org.apache.hadoop.fs.LocalFileSystem.class.getName());
@@ -77,7 +77,7 @@ public class DemoHa {
 
         try {
             FileSystem fileSystem = FileSystem.get(conf);
-            Path path = new Path("hdfs://kongfz/tmp/test/testrecord/2019/4/23/test.avro");
+            Path path = new Path("hdfs://izhengyin/tmp/test/testrecord/2019/4/23/test.avro");
             if(fileSystem.exists(path.getParent())){
                 fileSystem.mkdirs(path.getParent());
             }

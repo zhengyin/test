@@ -26,6 +26,9 @@
         <module>test-spring-boot</module>
         <module>test-java9-feature</module>
         <module>test-class-loader</module>
+        <module>test-spring</module>
+        <module>test-simple-rpc</module>
+        <module>test-io-model</module>
     </modules>
 
     <properties>
@@ -61,6 +64,19 @@
             <artifactId>junit</artifactId>
             <version>${junit_version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+            <version>2.3.0.RELEASE</version>
+        </dependency>
+
+
+
     </dependencies>
 
     <build>

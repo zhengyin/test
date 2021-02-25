@@ -15,12 +15,12 @@ import java.io.IOException;
 public class HdfsUnits {
     public static Configuration getHdfsHaClusterConfig(){
         Configuration configuration = new Configuration();
-        configuration.set("fs.defaultFS","hdfs://kongfz");
-        configuration.set("dfs.nameservices", "kongfz");
+        configuration.set("fs.defaultFS","hdfs://izhengyin");
+        configuration.set("dfs.nameservices", "izhengyin");
         configuration.set("dfs.ha.namenodes.hadoop2cluster" , "nn1,nn2");
-        configuration.set("dfs.namenode.rpc-address.kongfz.nn1" , "hadoop-master1:9000");
-        configuration.set("dfs.namenode.rpc-address.kongfz.nn2" , "hadoop-master2:9000");
-        configuration.set("dfs.client.failover.proxy.provider.kongfz" , "org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider");
+        configuration.set("dfs.namenode.rpc-address.izhengyin.nn1" , "hadoop-master1:9000");
+        configuration.set("dfs.namenode.rpc-address.izhengyin.nn2" , "hadoop-master2:9000");
+        configuration.set("dfs.client.failover.proxy.provider.izhengyin" , "org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider");
         return configuration;
     }
 

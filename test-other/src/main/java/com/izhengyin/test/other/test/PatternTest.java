@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  */
 public class PatternTest {
     public static void main(String[] args) {
-        String a = "com.kongfz.cloud.pmservice.controller.v1.biddingitemlistcontroller$$enhancerbyspringcglib$$6e0ab6c0.getcatsublist";
+        String a = "com.izhengyin.cloud.pmservice.controller.v1.biddingitemlistcontroller$$enhancerbyspringcglib$$6e0ab6c0.getcatsublist";
         Pattern pattern = Pattern.compile("$$enhancerbyspringcglib$$\\w+\\.");
         Pattern pattern2 = Pattern.compile("\\$\\$enhancerbyspringcglib\\$\\$\\w+");
         System.out.println(pattern2.matcher(a).replaceAll(""));

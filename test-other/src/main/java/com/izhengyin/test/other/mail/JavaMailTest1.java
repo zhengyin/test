@@ -35,7 +35,7 @@ public class JavaMailTest1 {
         // 连接邮件服务器
         transport.connect("izhengyin@163.com", "a123456");
         // 发送邮件
-        transport.sendMessage(msg, new Address[] {new InternetAddress("zhengyin@kongfz.com")});
+        transport.sendMessage(msg, new Address[] {new InternetAddress("zhengyinit@outlook.com")});
         // 关闭连接
         transport.close();
 

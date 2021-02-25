@@ -30,18 +30,18 @@ public class DemoTextFile {
         Configuration conf = new Configuration();
 
         //设置配置相关的信息，分别对应hdfs-site.xml core-site.xml
-        conf.set("fs.defaultFS", "hdfs://kongfz");
-        conf.set("dfs.nameservices", "kongfz");
-        conf.set("dfs.ha.namenodes.kongfz", "nn1,nn2");
-        conf.set("dfs.namenode.rpc-address.kongfz.nn1", "hadoop-master1:9000");
-        conf.set("dfs.namenode.rpc-address.kongfz.nn2", "hadoop-master2:9000");
-        conf.set("dfs.client.failover.proxy.provider.kongfz", "org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider");
+        conf.set("fs.defaultFS", "hdfs://izhengyin");
+        conf.set("dfs.nameservices", "izhengyin");
+        conf.set("dfs.ha.namenodes.izhengyin", "nn1,nn2");
+        conf.set("dfs.namenode.rpc-address.izhengyin.nn1", "hadoop-master1:9000");
+        conf.set("dfs.namenode.rpc-address.izhengyin.nn2", "hadoop-master2:9000");
+        conf.set("dfs.client.failover.proxy.provider.izhengyin", "org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider");
         //设置实现类，因为会出现类覆盖的问题
         conf.set("fs.hdfs.impl", org.apache.hadoop.hdfs.DistributedFileSystem.class.getName());
         conf.set("fs.file.impl", org.apache.hadoop.fs.LocalFileSystem.class.getName());
         FSDataOutputStream outputStream ;
         for(int i=0;i<100;i++){
-            String filename = "hdfs://kongfz/tmp/test/"+(i%10)+".json";
+            String filename = "hdfs://izhengyin/tmp/test/"+(i%10)+".json";
             System.out.println(filePath.toString());
             if(filePath != null && !filePath.toString().equals(filename)){
 

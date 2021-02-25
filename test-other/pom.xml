@@ -11,12 +11,6 @@
 
     <artifactId>test-other</artifactId>
     <dependencies>
-        <!-- https://gitlab.kongfz.com/server/api -->
-        <dependency>
-            <groupId>com.kongfz.service</groupId>
-            <artifactId>api</artifactId>
-            <version>1.5.2  </version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
         <dependency>
             <groupId>javax.mail</groupId>

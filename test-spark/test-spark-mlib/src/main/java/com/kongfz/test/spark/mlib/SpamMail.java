@@ -1,4 +1,4 @@
-package com.kongfz.test.spark.mlib;
+package com.izhengyin.test.spark.mlib;
 
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;

@@ -1,12 +1,16 @@
 package com.izhengyin.test.nio;
 
 import java.nio.ByteBuffer;
+import java.nio.channels.SelectionKey;
 
 /**
  * @author zhengyin < http://izhengyin.com >
  */
 public class BufferDemo {
 	public static void main(String[] args) {
+
+
+
 		
 		//创建一个 24 byte 的空间大小
 		int capacity = 24;
